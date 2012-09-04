@@ -52,7 +52,7 @@ a:hover { text-decoration:underline; }
 .content {
 position: relative;
 width: 400px;
-margin: 200px auto;
+margin: 200px 0px 200px 400px;
 padding: 20px;
 background: rgba(255, 255, 255, 0.8);
 -moz-box-shadow: 0 0 20px black;
