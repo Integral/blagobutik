@@ -40,6 +40,14 @@
       $('.' + target).show().fullBg();
       return false;
     });
+    $('#collection, #donate').hover(function() {
+      $('.fullBg').hide();
+      $('.collection').show().fullBg();
+    });
+    $('#main,#about,#contact').hover(function() {
+      $('.fullBg').hide();
+      $('.main').show().fullBg();
+    });
   });
   </script>
   <script type="text/javascript">
