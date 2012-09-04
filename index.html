@@ -15,7 +15,7 @@
 
       var scroll = $(this).scrollTop();
       $('.navigation a').removeClass('active');
-      var breaks = [400, 1200, 1500, 1800, 2500];
+      var breaks = [400, 1200, 1800, 2300, 3200];
       for (var i = 0; i < breaks.length; i++) {
         if (scroll < breaks[i]) {
           $('.navigation a:eq('+ i +')').addClass('active');
