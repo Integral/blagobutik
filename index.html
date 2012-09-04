@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <title>Благотворительный бутик</title>
+  <script type='text/javascript' src='jquery-1.4.4.min.js'></script>
+  <script type='text/javascript' src='jquery.scrollTo-min.js'></script>
+  <script type='text/javascript' src='fullbg.js'></script>
+  <script type='text/javascript'>
+  $(function() {
+    // Set active section as user scrolls.
+    var scrolling = false;
+    var scrollActive = function() {
+      if (scrolling) return false;
+
+      var scroll = $(this).scrollTop();
+      $('.navigation a').removeClass('active');
+      var breaks = [400, 1200, 1500, 1800, 2500];
+      for (var i = 0; i < breaks.length; i++) {
+        if (scroll < breaks[i]) {
+          $('.navigation a:eq('+ i +')').addClass('active');
+          break;
+        }
+      }
+    };
+    $(document).scroll(scrollActive);
+    scrollActive();
+
+    // Set active section, and scroll to it when a navigation link
+    // is clicked.
+    $('.navigation a').click(function() {
+      scrolling = true;
+      var target = $(this).attr('href').split('#')[1];
+      $.scrollTo($('#' + target), 500, function() {
+        scrolling = false;
+      });
+      $('.navigation a').removeClass('active');
+      $(this).addClass('active');
+      $('.fullBg').hide();
+      $('.' + target).show().fullBg();
+      return false;
+    });
+  });
+  </script>
+  <script type="text/javascript">
+  $(window).load(function() {
+	$(".main").fullBg();
+  });
+  </script>
+  <link rel='stylesheet' href='reset.css' type='text/css'/>
+  <link rel='stylesheet' href='style.css' type='text/css'/>
+</head>
+<body>
+<div id="sidebar">
+<a href="#main"><img class="logo" src="img/logo.jpg" /></a>
+<div class='navigation'>
+	<a href="#main">Главная</a>
+    <a href="#about">О нас</a>
+    <a href="#collection">Коллекция</a>
+    <a href="#donate">Пожертвовать</a>
+    <a href="#contact">Контакты</a>
+</div>
+<img class="sm" src="img/sm.jpg" />
+</div>
+<div id="container">
+<img src="img/background.jpg" class="fullBg main" />
+
+<div id='main' class='content'>
+<h1>ОТКРЫТИЕ 20-го СЕНТЯБРЯ 2012!</h1>
+<p>Наш сайт в процессе разработки, но уже сейчас Вы можете помочь 
+подопечным Благотворительного фонда помощи детям с онкогематологическими заболеваниями «Подари жизнь»  и Благотворительного фонда помощи хосписам «Вера»</p>
+<p></p>
+<p>Достаточно просто освободить свой шкаф от тех вещей, которые Вам 
+не подошли или Вы точно не будете их больше носить, а выкидывать жалко. Мы постараемся найти покупателя на каждую вещь,  принесенную Вами, а деньги передадим в указанные фонды.<p>
+<p></p>
+<p align="right">Коллектив Благотворительного Бутика</p>
+</div>
+
+
+<div id='about' class='content'>
+<img src="img/background.jpg" class="fullBg about" style="display:none" />
+<h1>О нас</h1>
+<p>Каждый день открывая шкаф мы видим, что какие-то вещи висят там уже давно, но они новые и их жалко выкидывать, а отдать некому.</p>
+<p>Благотворительный бутик позволит Вам отдать эти вещи в пользу тех, кто сегодня так нуждается в помощи, - подопечным Фондов 
+"Подари жизнь" и "Вера".</p>
+<p>Во всем мире существуют такие благотворительные магазины. В Англии такие магазины встречаются на каждом шагу. Некоторые предлагают взять вещь и оставить любую сумму, другие устанавливают цены, но всех их объединяет одно: одежду в магазин отдают бесплатно, а вырученные средства, за вычетом расходов на содержание и развитие магазина, идут на помощь нуждающимся. У нас в стране тоже стали открываться благотворительные магазины. Их пока еще очень мало, но мы уверены, что это только начало.</p>
+<p>Почему "Благотворительный Бутик"? Бутик, потому что мы предлагаем покупателям новые вещи, которые просто кому-то не подошли или после первого выхода остались в шкафу. А благотворительный, потому, что лечение подопечных наших фондов обходится очень дорого, ведь один флакон лекарства может стоить 2-3 тысячи долларов, а значит нам нужно продавать хорошие вещи, чтобы собирать достаточно денег.</p>
+<p></p>
+<p>Загляните в свой шкаф и Вы убедитесь, что хотя бы одна такая вещь у Вас есть, а значит Благотворительный бутик - это для Вас.</p>
+</div>
+
+  <div id='collection' class='content'>
+  <img src="img/vid.jpg" class="fullBg collection" style="display:none" />
+    <h1>В НАСТОЯЩЕЕ ВРЕМЯ ДАННАЯ СТРАНИЦА НА РЕКОНСТРУКЦИИ</h1>
+    <p>Мы планируем фотографировать переданные нам вещи и давать возможность потенциальным покупателем на них посмотреть, а при желании приобрести прямо на сайте.</p>
+  </div>
+  <div id='donate' class='content'>
+  <img src="img/vid.jpg" class="fullBg donate" style="display:none" />
+  <h1>Пожертвовать</h1>
+    <p>В Благотворительный бутик можно пожертвовать новую или почти новую ВЗРОСЛУЮ одежду, обувь, аксессуары, которые Вам не подошли или просто стали нерациональной покупкой.</p>
+<p>Мы постараемся найти покупателя на каждую вещь,  принесенную Вами. Вырученные средства, за вычетом разумных расходов на содержание, будут перечислены благотворительным фондам. Результаты Вашей помощи будут публиковаться здесь же на сайте, а также в отчетах фондов.</p>
+<p>Передать вещи очень просто. Вы можете:</p>
+<ul>
+<li>1. Приехать в наш магазин  ул. Большая Черемушкинская, д.1, ТРЦ РИО, U20a, цокольный этаж</li>
+<li>2. Оставить вещи в помещении Фонда "Подари жизнь" по адресу: 2-ой Неопалимовский переулок, д.7 (ст. м.Парк Культуры)</li>
+<li>3. Оставить вещи в помещении Фонда "Вера" по адресу: ул. Доватора, 10 (ст.м.Спортивная)</li>
+<li>4. Позвонить по тел. +7(916)6105423 или написать на info@blagobutik.ru и мы заберем у Вас вещи.</li>
+</ul>
+<p>Мы планируем разработать на сайте интерактивный портал, который позволит Вам отслеживать судьбу своих вещей. </p>
+<p>Если мы не смогли продать Вашу вещь, то мы передадим ее в качестве пожертвования в другие благотворительные организации, которые занимаются помощью одеждой нуждающимся.  </p>
+
+  </div>
+
+<div id='contact' class='content'>
+<img src="img/background.jpg" class="fullBg contact" style="display:none" />
+<iframe width="400" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ru/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=%D1%82%D1%86+%D1%80%D0%B8%D0%BE&amp;aq=&amp;sll=55.689875,37.58955&amp;sspn=0.058637,0.153637&amp;ie=UTF8&amp;hq=%D1%82%D1%86+%D1%80%D0%B8%D0%BE&amp;hnear=&amp;t=m&amp;cid=13770031989594732003&amp;ll=55.689972,37.58749&amp;spn=0.033866,0.072956&amp;z=13&amp;output=embed"></iframe>
+<h1>Контакты</h1>
+ Москва, ул. Большая Черемушкинская, д.1, ТРЦ РИО, U20a, цокольный этаж 
+Тел. +7(916)6105423, info@blagobutik.ru
+Время работы с 10 до 22. Прием вещей с 11 до 21.
+</div>
+</div>
+</body>
+</html>
