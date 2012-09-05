@@ -40,7 +40,11 @@
       $('.' + target).show().fullBg();
       return false;
     });
-    $('#collection, #donate').hover(function() {
+    $('#donate').hover(function() {
+      $('.fullBg').hide();
+      $('.donate').show().fullBg();
+    });
+    $('#collection').hover(function() {
       $('.fullBg').hide();
       $('.collection').show().fullBg();
     });
@@ -98,7 +102,7 @@
 </div>
 
   <div id='collection' class='content'>
-  <img src="img/vid.jpg" class="fullBg collection" style="display:none" />
+  <img src="img/photo.jpg" class="fullBg collection" style="display:none" />
     <h1>В НАСТОЯЩЕЕ ВРЕМЯ ДАННАЯ СТРАНИЦА НА РЕКОНСТРУКЦИИ</h1>
     <p>Мы планируем фотографировать переданные нам вещи и давать возможность потенциальным покупателем на них посмотреть, а при желании приобрести прямо на сайте.</p>
   </div>
