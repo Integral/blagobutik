@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <title>Благотворительный бутик</title>
+  <script type='text/javascript' src='{{site.root_dir}}/jquery-1.4.4.min.js'></script>
+  <script type='text/javascript'>
+  $(document).ready(function() {$('.content').fadeIn(4000);})
+  </script>
+  <link rel='stylesheet' href='{{site.root_dir}}/reset.css' type='text/css'/>
+  <link rel='stylesheet' href='{{site.root_dir}}/style.css' type='text/css'/>
+</head>
+<body>
+<div id="sidebar">
+<a href="#main"><img class="logo" src="{{site.root_dir}}/img/logo.jpg" /></a>
+<ul class='navigation'>
+	<li><a href="/">Главная</a></li>
+    <li><a href="/about">О нас</a></li>
+    <li><a href="/collection">Коллекция</a></li>
+    <li><a href="/donate">Пожертвовать</a></li>
+    <li><a href="/contact">Контакты</a></li>
+</div>
+</div>
+<div id="container" style="background-image:url({{page.background}});">
+<div id='news' class='content' style="{% if page.width %}width:{{page.width}}px;{% endif %}">
+{{content}}
+</div>
+</div>
+</body>
+</html>
