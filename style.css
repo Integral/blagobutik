@@ -65,12 +65,17 @@ position: relative;
 width: 400px;
 margin: 0px auto;
 padding: 20px;
-background: rgba(255, 255, 255, 0.8);
+background-color: #fff;
 -moz-box-shadow: 0 0 20px black;
 -webkit-box-shadow: 0 0 20px black;
 box-shadow: 0 0 20px black;
 top: 115px;
 display:none;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+filter: alpha(opacity=80);
+-moz-opacity:0.8;
+-khtml-opacity: 0.8;
+opacity: 0.8;
 }
 
 /**
