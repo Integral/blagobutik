@@ -170,3 +170,13 @@ pre {
   display: block;
   position: fixed;
 }
+
+.slides {
+  width: 200px;
+  display: block;
+}
+
+.slides img {
+  float: left;
+  margin-right: 10px;
+}
