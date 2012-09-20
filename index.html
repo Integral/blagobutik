@@ -19,17 +19,11 @@ background: /img/background.jpg
 
 {% endfor %}
 
-{% for item in site.categories.news limit:3 offset:1 %}  
-<a class="news" href="{{site.root_dir}}{{item.url}}"></a>
+{% for item in site.categories.news limit:3 offset:1 %}
+<p></p>
+<a class="news" href="{{site.root_dir}}{{item.url}}">
         <h1 class="title">
           {{item.title}}
-        </h1>
-        {% if item.subtitle %}
-        <small class="subtitle">
-          {{item.subtitle}}
-        </small>
-        {% endif %}
-
+        </h1></a>
         <small class="date">{{ item.date | date: "%d.%m.%Y"  }}</small>
-
 {% endfor %}
